@@ -1,0 +1,7 @@
+@import "../../css/_mixins.scss";
+@import "../../css/_theme-vars.scss";
+
+//@mixin blog_styles_custom--xl() {
+@media #{$media_xl} {
+	/* Blog layout: Custom */
+}

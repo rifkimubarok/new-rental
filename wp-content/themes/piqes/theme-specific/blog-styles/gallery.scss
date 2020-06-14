@@ -1,0 +1,111 @@
+/* Blog layout: Portfolio Gallery (use Portfolio styles too)
+------------------------------------------------------------- */
+
+@import "../../css/_mixins.scss";
+@import "../../css/_theme-vars.scss";
+
+.post_layout_gallery * {
+	@include border-box;
+}
+.post_layout_gallery .post_details {
+	display:none;
+}
+.gallery_item_current {
+	opacity: 0 !important;
+}
+.gallery_preview {
+	@include fixed-lt(0, 0, 200000);
+	@include box(50%, 100%);
+	@include flex;
+	@include flex-align-items(center);
+	@include flex-align-content(center);
+	@include flex-justify-content(center);
+	pointer-events: none;
+}
+.gallery_preview:before {
+	content: ' ';
+	opacity: 0;
+	@include fixed-cover;
+	@include transition-property(opacity, 0.6s);
+}
+.gallery_preview_show {
+	pointer-events: auto;
+}
+.gallery_preview_show:before {
+	opacity: 1;
+}
+
+.gallery_preview_image_clone {
+	position: fixed;
+	z-index: 110;
+	@include transition-property(transform, 0.5s);
+	-webkit-backface-visibility: hidden;
+}
+.gallery_preview_image_original {
+	position: relative;
+	z-index: 120;
+	display: block;
+	object-fit: contain;
+	@include transition-property(opacity, 0.2s);
+	-webkit-backface-visibility: hidden;
+}
+
+.gallery_preview_show .gallery_preview_image_animate {				/* open */
+	@include transition(transform 0.6s, opacity 0.2s);
+}
+.gallery_preview_image_animate {									/* close */
+	@include transition(transform 0.3s, opacity 0.2s);
+}
+
+.gallery_preview_description {
+	@include abs-lt(100%, 0, 140);
+	@include box(100%, 100%);
+	@include border-box;
+	@include flex;
+	@include flex-direction(column);
+	@include flex-align-items(flex-start);
+	@include flex-justify-content(center);
+	@include transition(transform 1s, opacity 1s);
+	@include transition-timing(0.2, 1, 0.3, 1);
+	@include translate3d(0, 30px, 0);
+	padding: 0 3em;
+	opacity: 0;
+}
+
+.gallery_preview_show .gallery_preview_description {
+	opacity: 1;
+	@include transition-delay(0.2s);
+	@include translate3d(0, 0, 0);
+}
+
+.gallery_preview_show .post_title {
+	margin: 0 0 0.5em;
+}
+.gallery_preview_show .post_meta {
+	@include font(1em, 1.3em);
+	margin-top:0;
+	margin-bottom:2em;
+}
+.gallery_preview_show .post_description_content {
+	max-width: 100%;
+	@include font(1.1429em, 2em);
+}
+
+.gallery_preview_close {
+	font-size: 2em;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+	vertical-align: top;
+	border: none;
+	background: none;
+	padding: 1em;
+	opacity: 0;
+	@include fixed-rt(0, 0, 150);
+	@include transition(transform 0.3s, opacity 0.3s);
+	@include scale3d(0.6, 0.6, 1);
+}
+.gallery_preview_image_loaded .gallery_preview_close {
+	opacity: 1;
+	@include scale3d(1, 1, 1);
+}

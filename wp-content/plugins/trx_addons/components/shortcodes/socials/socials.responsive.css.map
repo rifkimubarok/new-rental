@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAIA,yBAAoB;EAChB,aAAa;EAChB,uCAAwC;IC4BxC,KAAK,ED3BY,GAAG;IC4BpB,MAAM,ED5BW,GAAG;IC6BpB,WAAW,ED7BM,GAAG;IC8BpB,UAAU,EAAC,MAAM;;;ED5BjB,0BAA2B;IAC1B,MAAM,EAAE,WAAW",
+"sources": ["socials.responsive.scss","../../../css/_mixins.scss"],
+"names": [],
+"file": "socials.responsive.css"
+}

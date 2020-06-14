@@ -1,0 +1,839 @@
+/* Theme Panel
+-----------------------------------------------------------------*/
+.trx_addons_theme_panel {
+  font-size: 1.1538em;
+  line-height: 1.5em;
+}
+
+@media (max-width: 1279px) {
+  .trx_addons_theme_panel {
+    font-size: 1em;
+  }
+}
+.update-nag ~ .trx_addons_theme_panel {
+  margin-top: 2em;
+}
+
+.trx_addons_theme_panel_busy {
+  pointer-events: none;
+}
+
+.trx_addons_theme_panel .trx_addons_tabs_section {
+  margin-right: 2em;
+}
+
+@media (max-width: 1023px) {
+  .trx_addons_theme_panel .trx_addons_tabs_section {
+    margin-right: 1em;
+  }
+}
+.trx_addons_theme_panel p {
+  font-size: 1em;
+}
+
+.trx_addons_theme_panel .trx_buttons {
+  text-align: right;
+}
+
+.trx_addons_panel_wizard > ul {
+  pointer-events: none;
+}
+
+.trx_addons_panel_wizard > ul > li > a {
+  color: #ddd;
+}
+
+.trx_addons_panel_wizard > ul > li > a:before {
+  font-family: "trx_addons_icons";
+  content: '\e8bd';
+  font-size: 8px;
+  padding: 3px;
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
+  text-align: center;
+  -webkit-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  color: #ddd;
+}
+
+.trx_addons_panel_wizard > ul > li.trx_addons_panel_wizard_active > a {
+  color: #333;
+}
+
+.trx_addons_panel_wizard > ul > li.trx_addons_panel_wizard_active > a:before {
+  border-color: #333;
+  background-color: transparent;
+  color: #333;
+}
+
+.trx_addons_panel_wizard > ul > li.trx_addons_panel_wizard_finished > a {
+  color: #07bea7;
+}
+
+.trx_addons_panel_wizard > ul > li.trx_addons_panel_wizard_finished > a:before {
+  border-color: #07bea7;
+  background-color: #07bea7;
+  color: #fff;
+}
+
+.trx_addons_panel_wizard .trx_addons_tabs_section {
+  position: relative;
+}
+
+.trx_addons_panel_wizard .trx_addons_tabs_section .trx_addons_theme_panel_plugins_install,
+.trx_addons_panel_wizard .trx_addons_tabs_section .trx_buttons > .button {
+  position: absolute;
+  right: 8em;
+  bottom: 1.7em;
+}
+
+/* Admin message */
+.trx_addons_theme_panel .trx_addons_result {
+  margin: 1em 0 2em;
+}
+
+.trx_addons_tabs .error,
+.trx_addons_tabs .notice,
+.trx_addons_tabs .notice-error,
+.trx_addons_tabs .updated {
+  margin: 0;
+  background-color: #fafafa;
+}
+
+/* Theme info */
+.trx_addons_theme_panel_section_title {
+  line-height: 1.4em;
+  margin-top: 0;
+}
+
+[class*="trx_addons_theme_panel_section_title_label"] {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 10px;
+  line-height: 16px;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  -webkit-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  color: #fff;
+  margin-left: 1em;
+}
+
+.trx_addons_theme_panel_section_title_label_active {
+  background-color: #85d0f5;
+}
+
+.trx_addons_theme_panel_section_title_label_inactive {
+  background-color: #dd4b39;
+}
+
+.trx_addons_theme_panel_section_title_label_free {
+  background-color: #07bea7;
+}
+
+.trx_addons_theme_panel_section_info p,
+.trx_addons_theme_panel_section_description p {
+  margin: 0;
+}
+
+.trx_addons_theme_panel_section_info p + p,
+.trx_addons_theme_panel_section_description p + p {
+  margin-top: 0.3em;
+}
+
+.trx_addons_theme_panel_section_info {
+  border: 1px solid #ddd;
+  padding: 1.5em;
+  margin-bottom: 2em;
+  background-color: #fafafa;
+}
+
+.trx_addons_theme_panel_section_info_notice {
+  font-style: italic;
+}
+
+/* System Info */
+.trx_addons_theme_panel_theme_active,
+.trx_addons_theme_panel_sys_info {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.trx_addons_theme_panel_theme_active {
+  padding-right: 2em;
+}
+
+.trx_addons_theme_panel_sys_info {
+  border: 1px solid #ddd;
+  padding: 1.5em;
+  background-color: #fafafa;
+}
+
+@media (max-width: 767px) {
+  .trx_addons_theme_panel_theme_active,
+  .trx_addons_theme_panel_sys_info {
+    display: block;
+    width: 100%;
+  }
+
+  .trx_addons_theme_panel_theme_active {
+    padding: 0 0 2em;
+  }
+}
+.trx_addons_theme_panel_sys_info table {
+  border-collapse: collapse;
+}
+
+.trx_addons_theme_panel_sys_info table th {
+  text-align: left;
+  padding: 0.2em 0.3em 0.4em;
+  border-bottom: 1px solid #ddd;
+}
+
+.trx_addons_theme_panel_sys_info table td {
+  padding: 0.2em;
+}
+
+.trx_addons_theme_panel_sys_info table tr:nth-child(2) td {
+  padding-top: 0.4em;
+}
+
+/* Fields
+-------------------------------- */
+.trx_addons_theme_panel_section_form_field {
+  margin-top: 1em;
+}
+
+.trx_addons_theme_panel_section_form_field_label {
+  display: block;
+  margin-bottom: 0.3em;
+}
+
+.trx_addons_theme_panel_section_form_field_label > .required {
+  color: #aa0000;
+}
+
+.trx_addons_theme_panel_section_form_field input[type="checkbox"] + .trx_addons_theme_panel_section_form_field_label {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+.trx_addons_theme_panel_section_form_field input[type="text"] {
+  width: 20em;
+  max-width: 70%;
+}
+
+.trx_addons_theme_panel_section_form_field_description {
+  font-style: italic;
+  display: inline-block;
+  vertical-align: baseline;
+  margin: 0 0 0 0.5em;
+}
+
+.trx_addons_theme_panel_theme_active .trx_addons_theme_panel_install_wizard {
+  margin-top: 1.5em;
+}
+
+.trx_addons_theme_panel .button.button-primary[disabled] {
+  background-color: #f7f7f7 !important;
+  color: #888 !important;
+  border-color: #ddd !important;
+  text-shadow: none !important;
+}
+
+.trx_addons_theme_panel_buttons {
+  overflow: hidden;
+  display: none;
+}
+
+#trx_addons_theme_panel_section_general .trx_addons_theme_panel_buttons,
+.trx_addons_panel_wizard .trx_addons_theme_panel_buttons {
+  display: block;
+}
+
+.trx_addons_theme_panel_buttons > a.button {
+  font-size: 1.1538em;
+  line-height: 1.7em;
+  padding: 0.6em 1.2em;
+  height: auto;
+  display: inline-block;
+}
+
+.trx_addons_theme_panel_buttons .trx_addons_theme_panel_prev_step {
+  float: left;
+}
+
+.trx_addons_theme_panel_buttons .trx_addons_theme_panel_next_step {
+  float: right;
+}
+
+.trx_addons_theme_panel .wp-picker-container input[type="text"].wp-color-picker {
+  width: 4.5em;
+}
+
+/* Plugins list
+-------------------------------- */
+.trx_addons_theme_panel_plugins_group {
+  border: 2px solid #2a8aaa;
+}
+
+.trx_addons_theme_panel_plugins_group + .trx_addons_theme_panel_plugins_group {
+  margin-top: 1em;
+}
+
+.trx_addons_theme_panel_plugins_group_title {
+  margin: 0;
+  font-size: 1.25em;
+  line-height: 1.5em;
+  padding: 0.75em 5em 0.75em 1em;
+  background-color: #e0f0fa;
+  color: #2a8aaa;
+  border-bottom: 1px solid transparent;
+  position: relative;
+  -webkit-transition: border-color 0.3s ease;
+  -ms-transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.trx_addons_theme_panel_plugins_group_opened .trx_addons_theme_panel_plugins_group_title {
+  border-bottom-color: #2a8aaa;
+}
+
+.trx_addons_theme_panel_plugins_group_opened .trx_addons_theme_panel_plugins_group_title:after {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.trx_addons_theme_panel_plugins_group_title:after {
+  content: '\e857';
+  font-family: "trx_addons_icons";
+  display: inline-block;
+  vertical-align: top;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  right: 1em;
+  margin-top: -0.5em;
+  -webkit-transition: rotate 0.3s ease;
+  -ms-transition: rotate 0.3s ease;
+  transition: rotate 0.3s ease;
+}
+
+.trx_addons_theme_panel_plugins_group_plugins {
+  padding: 1em 0 1em 2em;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.trx_addons_theme_panel_plugins_group:not(.trx_addons_theme_panel_plugins_group_opened) .trx_addons_theme_panel_plugins_group_plugins {
+  display: none;
+}
+
+.trx_addons_theme_panel_plugins_list_item {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  padding: 0 2em 0 0;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1023px) {
+  .trx_addons_theme_panel_plugins_list_item {
+    width: 100%;
+  }
+
+  .trx_addons_theme_panel_plugins_list_item:nth-child(n+2) > a {
+    border-top: 1px dotted #ddd;
+  }
+}
+.trx_addons_theme_panel_plugins_list_item > a {
+  display: block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 1em 0 1em 0.5em;
+  position: relative;
+  text-decoration: none;
+}
+
+.trx_addons_theme_panel_plugins_list_item:nth-child(n+3) > a {
+  border-top: 1px dotted #ddd;
+}
+
+.trx_addons_theme_panel_plugins_list_item > a,
+.trx_addons_theme_panel_plugins_list_item > a:hover {
+  color: #333;
+}
+
+.trx_addons_theme_panel_plugins_list_item > a[data-required="1"]:hover,
+.trx_addons_theme_panel_plugins_list_item > a[data-state="deactivate"]:hover {
+  cursor: not-allowed;
+}
+
+.trx_addons_theme_panel_plugins_list_item_check {
+  display: inline-block;
+  vertical-align: middle;
+  width: 2.5em;
+  height: 2.5em;
+  line-height: 2.5em;
+  text-align: center;
+  -webkit-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #eee;
+  color: #333;
+  margin-right: 1.5em;
+  overflow: hidden;
+}
+
+.trx_addons_theme_panel_plugins_list_item_check:before {
+  content: ' ';
+  font-family: "trx_addons_icons";
+}
+
+.trx_addons_theme_panel_plugins_list_item_checked > a .trx_addons_theme_panel_plugins_list_item_check:before {
+  content: '\e8bd';
+}
+
+.trx_addons_theme_panel_plugins_list_item_check.trx_addons_loading {
+  color: #fff;
+}
+
+.trx_addons_theme_panel_plugins_list_item_check.trx_addons_loading:before {
+  content: '\e800' !important;
+  margin: 0;
+}
+
+.trx_addons_theme_panel_plugins_list_item > a[data-state="deactivate"] .trx_addons_theme_panel_plugins_list_item_check {
+  color: #fff;
+  background-color: #07bea7;
+}
+
+.trx_addons_theme_panel_plugins_list_item > a[data-state="deactivate"] .trx_addons_theme_panel_plugins_list_item_check:before {
+  content: '\e8f1';
+}
+
+.trx_addons_theme_panel_plugins_list_item_image {
+  width: 80px;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.trx_addons_theme_panel_plugins_list_item_info {
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(100% - 80px - 4em);
+  padding-left: 1.5em;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+  .trx_addons_theme_panel_plugins_list_item_info {
+    display: block;
+    width: 100%;
+    padding: 2em 0 0;
+  }
+}
+.trx_addons_theme_panel_plugins_list_item_title {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 1.25em;
+  line-height: 1.5em;
+  font-weight: bold;
+  position: relative;
+}
+
+.trx_addons_theme_panel_plugins_list_item_state {
+  font-size: 10px;
+  line-height: 14px;
+  position: absolute;
+  z-index: 1;
+  top: -18px;
+  right: -18px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 2px 6px;
+  color: #fff;
+  background-color: #07bea7;
+  border-color: #07bea7;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.trx_addons_theme_panel_plugins_list_item_state:before {
+  content: " ";
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 1em;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 4px 7px 0 0;
+  border-top-color: inherit;
+  border-left-color: transparent !important;
+  border-right-color: transparent !important;
+  border-bottom-color: transparent !important;
+}
+
+.trx_addons_theme_panel_plugins_list_item:not(.trx_addons_theme_panel_plugins_list_item_checked) > a:not([data-state="deactivate"]) .trx_addons_theme_panel_plugins_list_item_state {
+  background-color: #f0f0f0;
+  border-color: #f0f0f0;
+  color: #bbb;
+}
+
+.trx_addons_theme_panel_plugins_list_item > a[data-state="install"] .trx_addons_theme_panel_plugins_list_item_state {
+  background-color: #e73636;
+  border-color: #e73636;
+}
+
+.trx_addons_theme_panel_plugins_list_item > a[data-state="install"] .trx_addons_theme_panel_plugins_list_item_check.trx_addons_loading,
+.trx_addons_theme_panel_plugins_list_item > a[data-state="install"] .trx_addons_theme_panel_plugins_list_item_check.trx_addons_loading ~ .trx_addons_theme_panel_plugins_list_item_info .trx_addons_theme_panel_plugins_list_item_state {
+  background-color: #b32929;
+  border-color: #b32929;
+}
+
+.trx_addons_theme_panel_plugins_list_item > a[data-state="activate"] .trx_addons_theme_panel_plugins_list_item_state {
+  background-color: #32a6cc;
+  border-color: #32a6cc;
+  min-width: 8em;
+}
+
+.trx_addons_theme_panel_plugins_list_item > a[data-state="activate"] .trx_addons_theme_panel_plugins_list_item_check.trx_addons_loading,
+.trx_addons_theme_panel_plugins_list_item > a[data-state="activate"] .trx_addons_theme_panel_plugins_list_item_check.trx_addons_loading ~ .trx_addons_theme_panel_plugins_list_item_info .trx_addons_theme_panel_plugins_list_item_state {
+  background-color: #267c99;
+  border-color: #267c99;
+}
+
+.trx_addons_theme_panel_plugins_list_item_description {
+  display: block;
+  font-size: 1em;
+  line-height: 1.5em;
+  font-style: italic;
+}
+
+.trx_addons_theme_panel_plugins_buttons + .trx_addons_theme_panel_plugins_list {
+  margin-top: 2em;
+}
+
+.trx_addons_theme_panel_plugins_list + .trx_addons_theme_panel_plugins_buttons {
+  text-align: right;
+  margin-top: 2em;
+}
+
+.trx_addons_percent_loader {
+  display: none;
+  vertical-align: bottom;
+  margin: 0 1em 0.1em 0;
+  position: relative;
+  overflow: hidden;
+  width: 3em;
+  height: 3em;
+  line-height: 3em;
+  text-align: center;
+}
+
+.trx_addons_panel_wizard .trx_addons_tabs_section .trx_addons_theme_panel_plugins_installer .trx_addons_percent_loader {
+  position: absolute;
+  right: 22em;
+  margin-top: 0.4em;
+}
+
+.trx_addons_theme_panel.trx_addons_theme_panel_busy .trx_addons_percent_loader {
+  display: inline-block;
+}
+
+.trx_addons_percent_loader .trx_addons_percent_loader_bg {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../../css/images/preloader.gif);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: hue-rotate(50deg) saturate(50%);
+}
+
+.trx_addons_percent_loader .trx_addons_percent_loader_value {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  color: #00aa4a;
+}
+
+/* Demo data
+-------------------------------- */
+.trx_addons_panel_wizard #trx_addons_theme_panel_section_demo .trx_importer_advanced_settings_wrap {
+  margin-bottom: 0;
+}
+
+.trx_addons_panel_wizard #trx_addons_theme_panel_section_demo .trx_importer .trx_buttons {
+  margin-top: 0;
+}
+
+.trx_addons_panel_wizard #trx_addons_theme_panel_section_demo .trx_addons_theme_panel_buttons {
+  margin-top: 2em;
+}
+
+/* Blocks
+-------------------------------- */
+.trx_addons_theme_panel_links {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  margin-top: 3em;
+  text-align: center;
+}
+
+/* Classic block */
+.trx_addons_classic_block {
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+  padding: 0 2em 2em 0;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1279px) {
+  .trx_addons_classic_block {
+    width: 33.3333%;
+  }
+}
+@media (max-width: 1023px) {
+  .trx_addons_classic_block {
+    width: 50%;
+    padding: 0 1em 1em 0;
+  }
+}
+@media (max-width: 767px) {
+  .trx_addons_classic_block {
+    width: 100%;
+    font-size: 1em;
+  }
+}
+.trx_addons_classic_block_inner {
+  display: inline-block;
+  vertical-align: top;
+  padding: 2em;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-transition: -webkit-transform 0.3s ease, box-shadow 0.3s ease;
+  -ms-transition: -ms-transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trx_addons_classic_block_inner:hover {
+  -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transform: translateY(-3px);
+  -ms-transform: translateY(-3px);
+  transform: translateY(-3px);
+}
+
+.trx_addons_classic_block_image {
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  margin-bottom: 1em;
+}
+
+.trx_addons_classic_block_title {
+  margin: 0;
+}
+
+.trx_addons_classic_block_description {
+  margin: 1em 0;
+  line-height: 1.7em;
+}
+
+.trx_addons_classic_block a.trx_addons_classic_block_link,
+.trx_addons_classic_block span.trx_addons_classic_block_link {
+  font-size: 1em;
+  line-height: 1.7em;
+  padding: 0.5em 1em;
+  height: auto;
+  display: inline-block;
+  margin: 0.5em 0.5em 0.5em 0;
+  vertical-align: middle;
+  -webkit-transition: border 0.3s ease, background 0.3s ease, color 0.3s ease;
+  -ms-transition: border 0.3s ease, background 0.3s ease, color 0.3s ease;
+  transition: border 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.trx_addons_classic_block span.trx_addons_classic_block_link_active {
+  cursor: default;
+  pointer-events: none;
+}
+
+/* Image block */
+.trx_addons_image_block {
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+  padding: 0 2em 1em 0;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.trx_addons_image_block_inner {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 2em;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  position: relative;
+  background-position: top center;
+  background-size: cover;
+  height: 420px;
+}
+
+.trx_addons_image_block_inner:before {
+  content: ' ';
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  -ms-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.trx_addons_image_block_inner:hover:before {
+  opacity: 1;
+}
+
+@media (max-width: 1279px) {
+  .trx_addons_image_block {
+    width: 33.3333%;
+  }
+
+  .trx_addons_image_block_inner {
+    height: 320px;
+  }
+}
+@media (max-width: 767px) {
+  .trx_addons_image_block {
+    width: 50%;
+    font-size: 1em;
+  }
+}
+@media (max-width: 479px) {
+  .trx_addons_image_block {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+.trx_addons_image_block_title {
+  margin-bottom: 0;
+}
+
+.trx_addons_image_block_title + .trx_addons_image_block_description {
+  margin-top: 1em;
+}
+
+.button.trx_addons_image_block_link {
+  font-size: 1.1538em;
+  line-height: 1.7em;
+  padding: 0.6em 1.2em;
+  height: auto;
+  width: 75%;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.button.trx_addons_image_block_link + .button.trx_addons_image_block_link {
+  margin-top: 0.5em;
+}
+
+.trx_addons_image_block.skin_free .trx_addons_image_block_inner:before,
+.trx_addons_image_block.skin_buy .trx_addons_image_block_inner:before {
+  background-color: rgba(128, 128, 128, 0.75);
+  opacity: 1;
+}
+
+.trx_addons_image_block.skin_free .trx_addons_image_block_title,
+.trx_addons_image_block.skin_buy .trx_addons_image_block_title {
+  color: #888;
+}
+
+/*# sourceMappingURL=theme-panel.css.map */

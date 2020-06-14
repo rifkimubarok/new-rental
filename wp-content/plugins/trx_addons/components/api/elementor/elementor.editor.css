@@ -1,0 +1,83 @@
+/* Styles for controls in the Elementor Editor
+------------------------------------------------ */
+
+/* Make each panel category as accordion */
+#elementor-panel-categories .elementor-panel-category-title {
+	margin:  0 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	cursor: pointer;
+	border-top: 1px solid #d7dadd;
+	-webkit-transition: background-color 0.3s ease-out;
+	    -ms-transition: background-color 0.3s ease-out;
+	        transition: background-color 0.3s ease-out;
+}
+#elementor-panel-categories .elementor-panel-category-title:before {
+	right: 8px;
+}
+#elementor-panel-categories .elementor-panel-category-title:hover {
+	color: #000;
+	background-color: #abbccc;
+}
+#elementor-panel-categories .elementor-panel-category.elementor-active .elementor-panel-category-title {
+	background-color: #ddbbbb;
+	color: #b7084e;
+}
+
+/* Controls */
+.elementor-control .elementor-control-field {
+	flex-wrap: wrap;
+}
+.elementor-control .elementor-control-responsive-switchers .elementor-responsive-switcher {
+	margin-left: 3px;
+}
+
+/* Control's label inline */
+.elementor-control.elementor-label-inline > .elementor-control-content > .elementor-control-field {
+	justify-content: space-between;
+	flex-wrap: nowrap;
+}
+.elementor-control.elementor-label-inline > .elementor-control-content > .elementor-control-field > .elementor-control-title {
+	width: 40%;
+}
+.elementor-control.elementor-label-inline > .elementor-control-content > .elementor-control-field > .elementor-control-responsive-switchers {
+	margin: 0 3px;
+}
+.elementor-control.elementor-label-inline > .elementor-control-content > .elementor-control-field > .elementor-control-input-wrapper {
+	width: 45%;
+}
+.elementor-responsive-switchers-open .elementor-control.elementor-label-inline > .elementor-control-content > .elementor-control-field > .elementor-control-title {
+	width: 35%;
+}
+.elementor-responsive-switchers-open .elementor-control.elementor-label-inline > .elementor-control-content > .elementor-control-field > .elementor-control-responsive-switchers {
+	margin: 0 0 0 -1em;
+}
+.elementor-responsive-switchers-open .elementor-control.elementor-label-inline > .elementor-control-content > .elementor-control-field > .elementor-control-input-wrapper {
+	width: 40%;
+}
+
+/* Hide native Elementor's responsive params */
+body.replace_hide_on_xxx .elementor-control-hide_desktop,
+body.replace_hide_on_xxx .elementor-control-hide_tablet,
+body.replace_hide_on_xxx .elementor-control-hide_mobile {
+	display: none !important;
+}
+
+/* Icons selector */
+.elementor-control .trx_addons_icon_selector + .trx_addons_list_icons {
+	left: 0 !important;
+}
+.elementor-control .trx_addons_icon_selector + .trx_addons_list_icons span {
+	width: 2.2em;
+}
+
+
+/* Date_Time Control */
+.datepicker_header a.icon-home:before {
+	display: none;
+}
+
+/* Color picker */
+.elementor-control .iris-border .iris-picker-inner {
+	margin-right: -1px;
+}

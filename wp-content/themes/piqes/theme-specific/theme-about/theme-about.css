@@ -1,0 +1,87 @@
+/* About Theme
+----------------------------------------------------------------*/
+.piqes_about {
+  margin: 2em 2em 0 0;
+  padding: 6em 3em;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  text-align: center;
+}
+
+@media (max-width: 959px) {
+  .piqes_about {
+    margin: 1em 1em 0 0;
+    padding: 2em;
+  }
+}
+.piqes_about_logo {
+  margin: 0 0 2em 0;
+}
+
+.piqes_about_logo img {
+  max-width: 30%;
+  height: auto;
+}
+
+.piqes_about_title {
+  margin-top: 0;
+  line-height: 1.5em;
+}
+
+.piqes_about_description {
+  margin-bottom: 3em;
+  line-height: 1.5em;
+}
+
+.piqes_about_description p {
+  font-size: 1.25em;
+  line-height: 1.7em;
+  margin: 0.5em 0 0;
+}
+
+.piqes_about_description b,
+.piqes_about_description strong {
+  color: #333;
+}
+
+.piqes_about_buttons .piqes_plugins_installer_link.button {
+  height: 40px;
+  line-height: 38px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 15px;
+}
+
+.piqes_about_buttons .piqes_plugins_installer_link.button.updating-message:before {
+  line-height: 38px;
+  margin-top: 1px;
+}
+
+.piqes_about_buttons .piqes_plugins_installer_link.process_now {
+  cursor: not-allowed;
+}
+
+.piqes_about_notes {
+  margin-top: 5em;
+  color: #ccc;
+}
+
+.piqes_about_notes p {
+  font-size: 1.25em;
+  line-height: 1.7em;
+  margin: 0.5em 20% 0;
+}
+
+/*# sourceMappingURL=theme-about.css.map */

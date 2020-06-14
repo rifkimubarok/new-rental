@@ -1,0 +1,15 @@
+@media (max-width: 767px) {
+  /* WooCommerce */
+  .trx_addons_woocommerce_search_type_inline .trx_addons_woocommerce_search_form_options,
+  .trx_addons_woocommerce_search_type_inline .trx_addons_woocommerce_search_form_button {
+    display: block;
+    width: 100%;
+  }
+
+  .trx_addons_woocommerce_search_type_inline .trx_addons_woocommerce_search_form_button {
+    text-align: left;
+    margin-top: 1.5em;
+  }
+}
+
+/*# sourceMappingURL=woocommerce.responsive.css.map */

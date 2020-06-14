@@ -1,0 +1,16 @@
+@import "../../../css/_mixins.scss";
+@import "../../../css/_trx_addons.vars.scss";
+
+//@mixin sc_woocommerce_search--sm() {
+@media #{$media_sm} {
+    /* WooCommerce */
+	.trx_addons_woocommerce_search_type_inline .trx_addons_woocommerce_search_form_options,
+	.trx_addons_woocommerce_search_type_inline .trx_addons_woocommerce_search_form_button {
+		display:block;
+		width:100%;
+	}
+	.trx_addons_woocommerce_search_type_inline .trx_addons_woocommerce_search_form_button {
+		text-align: left;
+		margin-top: 1.5em;
+	}
+}

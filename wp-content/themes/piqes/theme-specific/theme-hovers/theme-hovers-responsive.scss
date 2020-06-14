@@ -1,0 +1,66 @@
+@import "../../css/_mixins.scss";
+@import "../../css/_theme-vars.scss";
+
+@media #{$media_lg} {
+	/* Arrow */
+	.sc_button_hover_arrow {
+		padding-left: 34px !important;
+		padding-right: 34px !important;
+	}
+	.sc_button_hover_arrow:hover {
+		padding-right: 53px !important;
+	}
+	.sc_button_hover_arrow:before {
+		right: 31px !important;
+		top: 52.3% !important;
+		font-size: 9px;
+		line-height: 1.4em;
+	}
+	.sc_button_hover_arrow:after {
+		width: 11px;
+		height: 2px;
+		top: 50.2% !important;
+	}
+	.sc_button_hover_arrow[disabled] {
+		&:after,
+		&:before {
+			display: none;
+		}
+		&:hover {
+			padding-left: 34px !important;
+			padding-right: 34px !important;
+		}
+	}
+	.sc_button_hover_arrow:hover:before,
+	.sc_button_hover_arrow.active:before,
+	.vc_active .sc_button_hover_arrow:before {
+		opacity: 1;
+		transition: all 350ms ease;
+		transition-delay: 200ms;
+		will-change: transform;
+	}
+	.sc_button_hover_arrow:hover:after,
+	.sc_button_hover_arrow.active:after,
+	.vc_active .sc_button_hover_arrow:after {
+		right: 34px !important;
+
+	}
+}
+@media #{$media_sm} {
+
+}
+
+//@mixin theme-hovers--xs() {
+@media #{$media_xs} {
+	/* Theme Hovers */
+	.post_featured.hover_border .post_info .post_info_back	{
+		padding: 2.5em;
+	}
+	.post_featured.hover_border .post_info:before,
+	.post_featured.hover_border .post_info:after {
+		@include abs-pos(20px, 20px, 20px, 20px);
+	}
+	.post_featured.hover_border .post_info .post_title {
+		padding-bottom: 4px;
+	}
+}

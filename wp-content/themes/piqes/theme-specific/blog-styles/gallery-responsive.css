@@ -1,0 +1,47 @@
+@media (max-width: 1279px) {
+  /* Blog layout: Portfolio Gallery */
+  .gallery_preview_show .post_readmore {
+    margin-top: 2em;
+  }
+}
+@media (max-width: 1023px) {
+  /* Blog layout: Portfolio Gallery */
+  .gallery_preview .post_description_content {
+    display: none !important;
+  }
+
+  .gallery_preview_description {
+    padding: 0 2em;
+  }
+
+  .gallery_preview_show .post_readmore {
+    margin-top: 0;
+  }
+}
+@media (max-width: 767px) {
+  /* Blog layout: Portfolio Gallery */
+  .gallery_preview_description {
+    padding: 0 1.6em;
+  }
+}
+@media (max-width: 479px) {
+  /* Blog layout: Portfolio Gallery */
+  .gallery_preview_show .post_title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .gallery_preview_description {
+    padding: 0 1.4em;
+  }
+
+  .gallery_preview_show .post_meta .post_meta_item {
+    display: block;
+  }
+
+  .gallery_preview_show .post_meta .post_meta_item:before {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=gallery-responsive.css.map */

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGA;mDACmD;AAEnD,iCAAkC;EACjC,QAAQ,EAAE,MAAM;;;AAEjB,mEAAoE;EACnE,OAAO,EAAE,eAAe;;;AAGzB,+BAAgC;EAC/B,SAAS,EAAE,KAAK;EAChB,WAAW,EAAE,GAAG;EAChB,cAAc,EAAE,CAAC;;;AAGlB,gBAAiB;EAChB,WAAW,EAAE,eAAe",
+"sources": ["give.scss"],
+"names": [],
+"file": "give.css"
+}

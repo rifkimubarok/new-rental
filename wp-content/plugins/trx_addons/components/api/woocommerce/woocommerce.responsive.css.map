@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAIA,yBAAoB;EAChB,iBAAiB;EACpB;uFACsF;IACrF,OAAO,EAAC,KAAK;IACb,KAAK,EAAC,IAAI;;;EAEX,qFAAsF;IACrF,UAAU,EAAE,IAAI;IAChB,UAAU,EAAE,KAAK",
+"sources": ["woocommerce.responsive.scss"],
+"names": [],
+"file": "woocommerce.responsive.css"
+}

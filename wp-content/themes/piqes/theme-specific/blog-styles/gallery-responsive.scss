@@ -1,0 +1,49 @@
+@import "../../css/_mixins.scss";
+@import "../../css/_theme-vars.scss";
+
+//@mixin blog_styles_gallery--lg() {
+@media #{$media_lg} {
+	/* Blog layout: Portfolio Gallery */
+	.gallery_preview_show .post_readmore {
+		margin-top: 2em;
+	}
+}
+
+//@mixin blog_styles_gallery--md() {
+@media #{$media_md} {
+	/* Blog layout: Portfolio Gallery */
+	.gallery_preview .post_description_content {
+		display: none !important;
+	}
+	.gallery_preview_description {
+		padding: 0 2em;
+	}
+	.gallery_preview_show .post_readmore {
+		margin-top:0;
+	}
+}
+
+//@mixin blog_styles_gallery--sm() {
+@media #{$media_sm} {
+	/* Blog layout: Portfolio Gallery */
+	.gallery_preview_description {
+		padding: 0 1.6em;
+	}
+}
+
+//@mixin blog_styles_gallery--xs() {
+@media #{$media_xs} {
+	/* Blog layout: Portfolio Gallery */
+	.gallery_preview_show .post_title {
+		@include font(16px, 20px);
+	}
+	.gallery_preview_description {
+		padding: 0 1.4em;
+	}
+	.gallery_preview_show .post_meta .post_meta_item {
+		display:block;
+	}
+	.gallery_preview_show .post_meta .post_meta_item:before {
+		display:none;
+	}
+}

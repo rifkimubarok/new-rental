@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAIA,yBAAoB;EACnB,eAAe;EACf,2EAA4E;IAC3E,OAAO,EAAE,IAAI;;;EAEd,kBAAmB;IAClB,YAAY,EAAE,CAAC;;;EAEhB,4EAA6E;IAC5E,WAAW,EAAE,GAAG;ICwEjB,SAAS,EDvEM,MAAM;IC0ErB,WAAW,ED1EY,IAAI;IC6E3B,WAAW,ED7EkB,IAAI;;;EAGjC,gDAAiD;IAChD,OAAO,EAAE,IAAI",
+"sources": ["accordionposts.responsive.scss","../../../css/_mixins.scss"],
+"names": [],
+"file": "accordionposts.responsive.css"
+}

@@ -1,0 +1,259 @@
+/* Gutenberg
+----------------------------------------------------------------- */
+/* TinyMCE Toolbar */
+.editor-block-list__layout .mce-toolbar .mce-btn i {
+  font-family: "dashicons", "tinymce";
+}
+
+.editor-block-list__layout .mce-toolbar .mce-btn button,
+.editor-block-list__layout input[type="text"][role="button"] {
+  background-color: transparent !important;
+}
+
+.editor-block-list__layout .mce-toolbar .mce-btn button {
+  color: #333 !important;
+  padding: 2px 3px !important;
+}
+
+/* Post title */
+.editor-post-title__block .editor-post-title__input {
+  min-height: 1em;
+  height: unset;
+}
+
+/* Editor area  */
+div.edit-post-layout {
+  height: unset;
+}
+
+body.edit-post-visual-editor {
+  font-size: 14px !important;
+  padding: 3em 0;
+  min-height: 50vh;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+}
+
+/* Editor area width for all post types */
+.editor-writing-flow {
+  margin: 0 auto;
+}
+
+.editor-writing-flow,
+.editor-block-list__block,
+.editor-post-title__block,
+.editor-default-block-appender {
+  max-width: 760px !important;
+}
+
+/* Editor area width for pages without sidebar */
+body.sidebar_position_hide.expand_content .editor-writing-flow,
+body.sidebar_position_hide.expand_content .editor-block-list__block,
+body.sidebar_position_hide.expand_content .editor-post-title__block,
+body.sidebar_position_hide.expand_content .editor-default-block-appender {
+  max-width: 1170px !important;
+}
+
+/* Editor area width for custom layouts */
+body.post-type-cpt_layouts .editor-block-list__block,
+body.post-type-cpt_layouts.sidebar_position_hide.expand_content .editor-block-list__block,
+body.post-type-cpt_layouts .editor-post-title__block,
+body.post-type-cpt_layouts .editor-default-block-appender {
+  max-width: none !important;
+}
+
+body.single-cpt_layouts .trx-addons-layout--single-preview {
+  max-width: 1170px !important;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* Theme grid */
+@media (min-width: 600px) {
+  /* Core columns in the editor */
+  body.edit-post-visual-editor .editor-block-list__block .editor-block-list__block-edit {
+    margin-left: -23px;
+    margin-right: -23px;
+  }
+}
+/* Core columns in the frontend */
+.wp-block-columns {
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.wp-block-column:nth-child(odd) {
+  margin-right: 0;
+}
+
+.wp-block-column:nth-child(even) {
+  margin-left: 0;
+}
+
+.wp-block-column:not(:first-child) {
+  margin-left: 20px;
+}
+
+.wp-block-column:not(:last-child) {
+  margin-right: 20px;
+}
+
+/* Kadence columns in the editor */
+.kt-gutter-default > .innerblocks-wrap > .editor-inner-blocks > .editor-block-list__layout > [data-type="kadence/column"] {
+  margin-right: 40px;
+}
+
+/* Kadence columns in the frontend */
+.kt-gutter-default > .wp-block-kadence-column {
+  margin-right: 40px;
+}
+
+/* CoBlocks columns in the frontend */
+.has-small-gutter > [class*="wp-block-coblocks-"]:not(:first-child) {
+  margin-left: 20px;
+}
+
+.has-small-gutter > [class*="wp-block-coblocks-"]:not(:last-child) {
+  margin-right: 20px;
+}
+
+/* Sidebar holder for the editor */
+body.edit-post-visual-editor:not(.post-type-cpt_layouts):not(.sidebar_position_hide) {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;
+}
+
+.sidebar_position_hide .editor-post-sidebar-holder,
+body.post-type-cpt_layouts .editor-post-sidebar-holder {
+  display: none;
+}
+
+.editor-post-sidebar-holder {
+  width: 370px;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+  min-height: 75vh;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.editor-post-sidebar-holder:before {
+  content: 'Sidebar';
+  display: inline-block;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  font-size: 3em;
+  line-height: 1em;
+  font-weight: bold;
+  color: #ccc;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Wide and Full blocks */
+.alignfull > img,
+.alignwide > img {
+  max-width: none;
+  width: 100%;
+}
+
+body.sidebar_hide .alignfull {
+  width: 100vw;
+  max-width: none;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+body.sidebar_hide .alignwide {
+  position: relative;
+  left: calc( -44vw + 50% );
+  width: 88vw;
+  max-width: none;
+}
+
+body:not(.sidebar_position_hide) .editor-block-list__layout .alignwide,
+body:not(.sidebar_position_hide) .editor-block-list__block[data-align="wide"],
+body:not(.sidebar_position_hide) .editor-block-list__layout .alignfull,
+body:not(.sidebar_position_hide) .editor-block-list__block[data-align="full"] {
+  max-width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+body.sidebar_position_hide .editor-block-list__layout .alignwide,
+body.sidebar_position_hide.expand_content .editor-block-list__layout .alignwide,
+body.sidebar_position_hide .editor-block-list__block[data-align="wide"],
+body.sidebar_position_hide.expand_content .editor-block-list__block[data-align="wide"] {
+  max-width: none !important;
+  width: calc(100% + 10em);
+  margin-left: -5em;
+}
+
+body.sidebar_position_hide .editor-block-list__layout .alignfull,
+body.sidebar_position_hide.expand_content .editor-block-list__layout .alignfull,
+body.sidebar_position_hide .editor-block-list__block[data-align="full"],
+body.sidebar_position_hide.expand_content .editor-block-list__block[data-align="full"] {
+  max-width: none !important;
+  width: calc(100% + 24em);
+  margin-left: -12em;
+}
+
+/* Fix for some core blocks in the edit mode
+------------------------------------------------- */
+/* Cover image */
+.editor-block-list__block .wp-block-cover .wp-block-cover-text {
+  color: #fff !important;
+}
+
+/* Media & Text */
+.wp-block-media-text .has-medium-font-size {
+  line-height: 1.5em;
+}
+
+.wp-block-media-text .has-large-font-size {
+  line-height: 1.4em;
+}
+
+.wp-block-media-text .has-huge-font-size {
+  line-height: 1.3em;
+}
+
+/* Kadence blocks 
+---------------------------------------- */
+.editor-block-list__block .kt-tabs-title-list {
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.editor-block-list__block .kt-tabs-layout-vtabs > .kt-tabs-wrap > .kt-tabs-title-list li {
+  margin-bottom: 1px;
+}
+
+.editor-block-list__block .kt-tabs-content-wrap {
+  border: 1px solid #ddd;
+}
+
+/*# sourceMappingURL=gutenberg.css.map */

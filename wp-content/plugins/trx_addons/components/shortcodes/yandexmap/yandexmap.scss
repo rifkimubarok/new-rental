@@ -1,0 +1,78 @@
+@import "../../../css/_mixins.scss";
+@import "../../../css/_trx_addons.vars.scss";
+
+.sc_yandexmap_wrap {
+	position:relative;
+}
+.sc_yandexmap {
+	position: relative;	
+	padding-top: 0.0001px;
+}
+.sc_yandexmap img {
+	max-width: none;
+}
+
+.sc_yandexmap > iframe {
+	width: 100%;
+	height: 100%;
+}
+
+.sc_yandexmap_prevent_scroll {
+	pointer-events: none;
+}
+
+.sc_yandexmap_title + .sc_yandexmap,
+.sc_yandexmap_title + .sc_yandexmap_content_wrap,
+.sc_yandexmap_subtitle + .sc_yandexmap,
+.sc_yandexmap_subtitle + .sc_yandexmap_content_wrap {
+	margin-top: 4.2em;
+}
+.sc_yandexmap_descr + .sc_yandexmap {
+	margin-top: 1em;
+}
+.sc_yandexmap_content_wrap {
+	position:relative;
+}
+.sc_yandexmap_content {
+	pointer-events: none;
+}
+.sc_yandexmap_content form {
+	pointer-events: initial;
+}
+.sc_yandexmap_content_default {
+	@include abs-pos(10%, 10%, 10%, auto);
+	width: 30%;
+	padding:1.5em;
+	overflow:auto;
+	@include border-box;
+}
+
+.sc_yandexmap_content_detailed {
+	position:relative;
+	padding: 2em 2em 2em 5em;
+	@include border-box;
+}
+.sc_yandexmap_content_detailed:before {
+	content: '\e8bb';
+	font-family: $trx_addons_icons;
+	@include font(2em, 1.3em);
+	@include abs-lt(1em, 1em, '');
+}
+.sc_yandexmap_content_detailed p {
+	margin-bottom:1em;
+}
+
+.sc_yandexmap_info_window h1,
+.sc_yandexmap_info_window h2,
+.sc_yandexmap_info_window h3,
+.sc_yandexmap_info_window h4,
+.sc_yandexmap_info_window h5,
+.sc_yandexmap_info_window h6 {
+	margin: 0 0 0.3em;
+}
+.sc_yandexmap_info_window p {
+	margin: 0;
+}
+.sc_yandexmap_info_window p+p {
+	margin-top: 0.3em;
+}
