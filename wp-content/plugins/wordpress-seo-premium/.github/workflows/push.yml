@@ -1,0 +1,34 @@
+name: Push to KweeksNews.com
+
+# Triggers the workflow on push or pull request events for the master branch
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    types: [ closed ]
+    branches: [ master ]
+
+# A workflow to push latest changes to KweeksNews.com
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout file
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: '1'
+    - name: Add SSH key
+      uses: webfactory/ssh-agent@v0.2.0
+      with:
+        ssh-private-key: ${{ secrets.WEB_SSH_KEY }}
+    - name: Add KweeksNews.com host key
+      run: ssh-keyscan direct.kweeksnews.com >> ~/.ssh/known_hosts
+    - name: Push latest update to KweeksNews.com
+      run: |
+        COMMIT_MESSAGE=$(git log -1 --pretty=%B)
+        git config --local user.email "admin@kweeksnews.com"
+        git config --local user.name "KweeksNews"
+        git checkout --orphan temp
+        git add .
+        git commit -m "$COMMIT_MESSAGE"
+        git push -u ssh://kweeksne@direct.kweeksnews.com/home/kweeksne/public_html/wp-content/plugins/wordpress-seo-premium temp:master -f
